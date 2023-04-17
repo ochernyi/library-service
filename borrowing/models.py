@@ -11,5 +11,9 @@ class Borrowing(models.Model):
     book = models.ForeignKey(Book, on_delete=models.PROTECT, related_name="borrowings")
     user = models.ForeignKey(User, on_delete=models.PROTECT, related_name="borrowings")
 
+    @property
+    def is_active(self):
+        return self.actual_return_date is None
+
     def __str__(self):
         return f"{self.book.title} borrowed by {self.user.first_name} {self.user.last_name}"

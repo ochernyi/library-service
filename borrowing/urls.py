@@ -1,8 +1,8 @@
 from rest_framework.routers import SimpleRouter
-from borrowing.views import BorrowViewSet
+from borrowing.views import BorrowingViewSet
 
 router = SimpleRouter()
-router.register("borrowings", BorrowViewSet, basename="borrowing")
+router.register("", BorrowingViewSet, basename="borrowing")
 urlpatterns = router.urls
 
 app_name = "borrowings"
