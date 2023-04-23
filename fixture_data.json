@@ -1,0 +1,102 @@
+[
+{
+    "model": "borrowing.borrowing",
+    "pk": 1,
+    "fields": {
+        "borrow_date": "2023-03-20",
+        "expected_return": "2023-04-10",
+        "actual_return": "2023-04-10",
+        "book": 3,
+        "user": 1
+    }
+},
+{
+    "model": "borrowing.borrowing",
+    "pk": 2,
+    "fields": {
+        "borrow_date": "2023-11-10",
+        "expected_return": "2023-12-10",
+        "actual_return": "2023-12-21",
+        "book": 3,
+        "user": 1
+    }
+},
+{
+    "model": "books.book",
+    "pk": 1,
+    "fields": {
+        "title": "Graf Monte Cristo",
+        "author": "Alexander Dyma",
+        "cover": false,
+        "inventory": 10,
+        "daily_fee": "1.00"
+    }
+},
+{
+    "model": "books.book",
+    "pk": 2,
+    "fields": {
+        "title": "Pirates of Carribian",
+        "author": "Author",
+        "cover": true,
+        "inventory": 5,
+        "daily_fee": "3.00"
+    }
+},
+{
+    "model": "books.book",
+    "pk": 3,
+    "fields": {
+        "title": "Romeo and Juliet",
+        "author": "William Shekspir",
+        "cover": true,
+        "inventory": 8,
+        "daily_fee": "4.00"
+    }
+},
+{
+    "model": "books.book",
+    "pk": 4,
+    "fields": {
+        "title": "Kobzar",
+        "author": "Taras Shevchenko",
+        "cover": false,
+        "inventory": 20,
+        "daily_fee": "3.50"
+    }
+},
+{
+    "model": "user.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$wMbY6Dn2iNRBvT7rNlEyT3$CW0CIG/fZMTJaJp5W7ylETVS0xMw25otZNDecIB0T38=",
+        "last_login": "2023-03-20T17:48:13.217Z",
+        "is_superuser": true,
+        "first_name": "Anton",
+        "last_name": "Yashnik",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-03-20T14:51:45.152Z",
+        "email": "test@admin.com",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "user.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$62GgxixzkC50yToPfW6WOJ$/4ko4F31U/9bze41bZCaUjFEppcb+v2LJ6lAVhmBKyI=",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "Oleh",
+        "last_name": "Chornyi",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-20T17:50:06.274Z",
+        "email": "user@user.com",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
