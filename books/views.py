@@ -11,9 +11,9 @@ class BookViewSet(ModelViewSet):
     serializer_class = BookSerializer
     queryset = Book.objects.all()
 
-    # def get_permissions(self) -> List[BasePermission]:
-    #     if self.action in ("list", "retrieve"):
-    #         permission_classes = [AllowAny]
-    #     else:
-    #         permission_classes = [IsAdminUser]
-    #     return [permission() for permission in permission_classes]
+    def get_permissions(self) -> List[BasePermission]:
+        if self.action in ("list", "retrieve"):
+            permission_classes = [AllowAny]
+        else:
+            permission_classes = [IsAdminUser]
+        return [permission() for permission in permission_classes]
