@@ -4,8 +4,8 @@
     "pk": 1,
     "fields": {
         "borrow_date": "2023-03-20",
-        "expected_return": "2023-04-10",
-        "actual_return": "2023-04-10",
+        "expected_return_date": "2023-04-10",
+        "actual_return_date": "2023-04-10",
         "book": 3,
         "user": 1
     }
@@ -15,8 +15,8 @@
     "pk": 2,
     "fields": {
         "borrow_date": "2023-11-10",
-        "expected_return": "2023-12-10",
-        "actual_return": "2023-12-21",
+        "expected_return_date": "2023-12-10",
+        "actual_return_date": "2023-12-21",
         "book": 3,
         "user": 1
     }
