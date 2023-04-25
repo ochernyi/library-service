@@ -61,11 +61,11 @@ class BorrowViewSet(ModelViewSet):
     def return_book(self, request: Request, pk: int = None) -> Response:
         """Endpoint for returning book and close the borrow"""
         borrow = self.get_object()
-        if borrow.actual_return is not None:
+        if borrow.actual_return_date is not None:
             raise ValidationError("This book has already been returned.")
         if self.request.user != borrow.user:
             raise ValidationError("You can`t return book which not yours")
-        borrow.actual_return = timezone.now()
+        borrow.actual_return_date = timezone.now()
         borrow.save()
         book = borrow.book
         book.inventory += 1
