@@ -64,39 +64,5 @@
         "inventory": 20,
         "daily_fee": "3.50"
     }
-},
-{
-    "model": "user.user",
-    "pk": 1,
-    "fields": {
-        "password": "pbkdf2_sha256$390000$wMbY6Dn2iNRBvT7rNlEyT3$CW0CIG/fZMTJaJp5W7ylETVS0xMw25otZNDecIB0T38=",
-        "last_login": "2023-03-20T17:48:13.217Z",
-        "is_superuser": true,
-        "first_name": "Anton",
-        "last_name": "Yashnik",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2023-03-20T14:51:45.152Z",
-        "email": "test@admin.com",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "user.user",
-    "pk": 2,
-    "fields": {
-        "password": "pbkdf2_sha256$390000$62GgxixzkC50yToPfW6WOJ$/4ko4F31U/9bze41bZCaUjFEppcb+v2LJ6lAVhmBKyI=",
-        "last_login": null,
-        "is_superuser": false,
-        "first_name": "Oleh",
-        "last_name": "Chornyi",
-        "is_staff": false,
-        "is_active": true,
-        "date_joined": "2023-03-20T17:50:06.274Z",
-        "email": "user@user.com",
-        "groups": [],
-        "user_permissions": []
-    }
 }
 ]

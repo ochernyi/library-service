@@ -89,13 +89,15 @@ WSGI_APPLICATION = "LibraryService.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.environ["POSTGRES_DB"],
+        "USER": os.environ["POSTGRES_USER"],
+        "PASSWORD": os.environ["POSTGRES_PASSWORD"],
+        "HOST": os.environ["POSTGRES_HOST"],
+        "PORT": os.environ["POSTGRES_PORT"],
     }
 }
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES["default"].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -162,17 +164,17 @@ SPECTACULAR_SETTINGS = {
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
-# CELERY_BROKER_URL = os.environ["CELERY_BROKER_URL"]
-# CELERY_RESULT_BACKEND = os.environ["CELERY_RESULT_BACKEND"]
-# CELERY_TIMEZONE = "Europe/Kiev"
-# CELERY_TASK_TRACK_STARTED = True
-# CELERY_TASK_TIME_LIMIT = 30 * 60
-# CELERY_IMPORTS = [
-#     "books.tasks",
-# ]
-# CELERY_BEAT_SCHEDULE = {
-#     "send_overdue_book_returns": {
-#         "task": "books.tasks.send_overdue_book_returns",
-#         "schedule": crontab(minute=0, hour=0),
-#     },
-# }
+CELERY_BROKER_URL = os.environ["CELERY_BROKER_URL"]
+CELERY_RESULT_BACKEND = os.environ["CELERY_RESULT_BACKEND"]
+CELERY_TIMEZONE = "Europe/Kiev"
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
+CELERY_IMPORTS = [
+    "books.tasks",
+]
+CELERY_BEAT_SCHEDULE = {
+    "send_overdue_book_returns": {
+        "task": "books.tasks.send_overdue_book_returns",
+        "schedule": crontab(minute=0, hour=0),
+    },
+}
