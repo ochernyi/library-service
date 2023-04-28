@@ -1,0 +1,8 @@
+.gitignore
+.idea
+.env.sample
+.env
+README.md
+__pycache__
+venv
+db.sqlite3

@@ -1,0 +1,68 @@
+[
+{
+    "model": "borrowing.borrowing",
+    "pk": 1,
+    "fields": {
+        "borrow_date": "2023-03-20",
+        "expected_return_date": "2023-04-10",
+        "actual_return_date": "2023-04-10",
+        "book": 3,
+        "user": 1
+    }
+},
+{
+    "model": "borrowing.borrowing",
+    "pk": 2,
+    "fields": {
+        "borrow_date": "2023-11-10",
+        "expected_return_date": "2023-12-10",
+        "actual_return_date": "2023-12-21",
+        "book": 3,
+        "user": 1
+    }
+},
+{
+    "model": "books.book",
+    "pk": 1,
+    "fields": {
+        "title": "Graf Monte Cristo",
+        "author": "Alexander Dyma",
+        "cover": false,
+        "inventory": 10,
+        "daily_fee": "1.00"
+    }
+},
+{
+    "model": "books.book",
+    "pk": 2,
+    "fields": {
+        "title": "Pirates of Carribian",
+        "author": "Author",
+        "cover": true,
+        "inventory": 5,
+        "daily_fee": "3.00"
+    }
+},
+{
+    "model": "books.book",
+    "pk": 3,
+    "fields": {
+        "title": "Romeo and Juliet",
+        "author": "William Shekspir",
+        "cover": true,
+        "inventory": 8,
+        "daily_fee": "4.00"
+    }
+},
+{
+    "model": "books.book",
+    "pk": 4,
+    "fields": {
+        "title": "Kobzar",
+        "author": "Taras Shevchenko",
+        "cover": false,
+        "inventory": 20,
+        "daily_fee": "3.50"
+    }
+}
+]
